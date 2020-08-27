@@ -1,0 +1,95 @@
+<div class="row" id="list-contacts">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Listas de contactos
+        </h1>
+      </div>
+    </div>
+    <ng-container *ngIf="listContacts.length > 0">
+      <div class="row">
+        <div class="col-lg3 col-md-6 col-12 mb-4" *ngFor="let contact of listContacts;let index=index">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">{{contact.name | capitalize}} {{contact.surname | capitalize}} | {{contact.sex}}</h4>
+              <p class="card-text">{{contact.description}}</p>
+            </div>
+            <div class="card-footer">
+              <!--
+              // data atributes necesarios para abrir el modal
+              data-toggle="modal" [attr.data-target]="'#modal_' + index"
+              -->
+              <a class="btn btn-primary btn-block text-light" data-toggle="modal" [attr.data-target]="'#modal_' + index"
+                 role="button">Ver detalles</a>
+            </div>
+          </div>
+
+          <!--Modal-->
+
+          <!--[attr.id]="1"  Permite modificar el id del elemento-->
+          <div class="modal fade" tabindex="-1" [attr.id]="'modal_'+index">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{{contact.name | capitalize}} {{contact.surname | capitalize}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <img
+                        [src]="contact.sex == 'hombre' ? 'assets/img/perfil-fb-hombre.jpg' : 'assets/img/perfil-fb-mujer.jpg'"
+                        alt="" class="img-fluid">
+                    </div>
+                    <div class="col-9">
+                      <div class="row">
+                        <div class="col-12">
+                          <p>{{contact.description ? contact.description : 'Sin Descripcion'}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-block">Telefono:</div>
+                          <div class="d-block">{{contact.telephone}}</div>
+                        </div>
+                        <div class="col-6">
+                          <div class="d-block">Email:</div>
+                          <div class="d-block ellipsis" [title]="contact.email"> {{contact.email}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 mt-4">
+                      {{contact.company ? contact.company : 'Sin empresa'}}
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="listContacts.length === 0">
+      <div class="row mt-5">
+        <div class="col-12">
+          <p class="text-center">No hay contacto disponibles !!!</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+

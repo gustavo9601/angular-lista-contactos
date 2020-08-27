@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Gustavo",
+        "surname": "Marquez",
+        "description": "Ingeniero de sofware",
+        "sex": "hombre",
+        "email": "ing.gustavo.marquez@gmail.com",
+        "telephone": "3134607953",
+        "company": "GM"
+    },
+    {
+        "name": "meliza s",
+        "surname": "Marquez Almendro",
+        "description": "Hermana  de la infancia",
+        "sex": "mujer",
+        "email": "mpa@hotmail.com",
+        "telephone": "666112233",
+        "company": ""
+    },
+    {
+        "name": "Cinthya",
+        "surname": "Rojas",
+        "description": "Novia",
+        "sex": "Mujer",
+        "email": "cr@gmail.es",
+        "telephone": "12345",
+        "company": "Porvenir"
+    }
+]

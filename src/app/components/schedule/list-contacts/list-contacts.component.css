@@ -1,0 +1,9 @@
+#list-contacts .card-footer a{
+  cursor: pointer;
+}
+
+/*Permite ocultar el texto de traspasar*/
+#list-contacts  .ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

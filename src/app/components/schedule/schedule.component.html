@@ -1,0 +1,16 @@
+<div class="row" id="shcedule">
+  <div class="menu col-md-1 col-12">
+    <div class="row">
+      <div class="menu-item col-md-12 col-6" [routerLink]="['/add-contact']">
+        <img class="img-fluid" src="assets/img/form.png" alt="" >
+      </div>
+      <div class="menu-item col-md-12 col-6" [routerLink]="['/list-contacts']">
+        <img class="img-fluid" src="assets/img/card.png" alt="" >
+      </div>
+    </div>
+  </div>
+
+  <div class="content col-md-11 col-12 h-100">
+    <router-outlet></router-outlet>
+  </div>
+</div>

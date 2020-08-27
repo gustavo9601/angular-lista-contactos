@@ -1,0 +1,41 @@
+#shcedule .menu {
+  background-color: #9e9e9e;
+}
+
+#shcedule .menu-item {
+  padding: 20px;
+  cursor: pointer;
+}
+
+
+#shcedule .menu-item:hover {
+  background-color: #50afdc;
+}
+
+#shcedule .menu-item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#shcedule .content {
+  padding: 30px;
+}
+
+/*Resolucion > 768px*/
+@media (min-width: 768px) {
+  #shcedule, .menu {
+    height: 100%;
+  }
+
+  #shcedule, .content {
+    overflow: auto;
+  }
+}
+
+/*Resolucion < 768px*/
+@media (max-width: 768px) {
+  #shcedule, .content {
+    overflow: hidden;
+  }
+}
